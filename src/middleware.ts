@@ -5,7 +5,8 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
   //they will not be visible who dont have token
-  const isPublicPath = path === "/login" || path === "/signup";
+  const isPublicPath =
+    path === "/login" || path === "/signup" || path === "/verifyemail";
   const token = request.cookies.get("token")?.value || "";
 
   //redirect authenticated users to the slash of app. In case they wanna go to signup, login
@@ -20,5 +21,5 @@ export function middleware(request: NextRequest) {
 
 //MATCHING PART
 export const config = {
-  matcher: ["/", "/profile", "/login", "/signup"],
+  matcher: ["/", "/profile", "/login", "/signup", "/verifyemail"],
 };
