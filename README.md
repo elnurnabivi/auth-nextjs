@@ -14,5 +14,7 @@ Tailwind CSS
 ## Features:
 
 User Signup: Users can register for an account by providing their username, email, and password.
+
 User Login: Registered users can log in to their accounts using their email and password.
+
 Authorization: The app handles user authorization, allowing access to certain features only to authenticated users.
